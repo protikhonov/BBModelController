@@ -39,9 +39,9 @@ static BBModelController * sharedModel = nil;
 #pragma mark Download Database
 
 - (void) downloadSQLite {
-	NSString * sqLitePath =  [[NSSearchPathForDirectoriesInDomains
-                                  	(NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
-                                        			stringByAppendingPathComponent:kCachesFolder];
+    NSString * sqLitePath =  [[NSSearchPathForDirectoriesInDomains
+                                  (NSLibraryDirectory, NSUserDomainMask, YES) objectAtIndex:0]
+                                        	       		stringByAppendingPathComponent:kCachesFolder];
     NSURL * url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",K_BASE_URL,K_DOWNLOAD_SQLITE_API]];
     NSString * filename = [NSString stringWithFormat:@"%@.%@",K_DBASE_NAME,K_DBASE_FORMAT];
     [BBDownloader downloadFileWithURL:url toDirectory:sqLitePath withName:filename];
