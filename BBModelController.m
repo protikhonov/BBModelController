@@ -68,8 +68,8 @@ static BBModelController * sharedModel = nil;
    return [FMDBDataAccess getIssueForCategory:_category byType:[NSNumber numberWithInt:issueType]];
 }
 
-- (NSMutableArray *) getIssuesForCategory:(BBIssueCategory *)category byType:(int)type {
-    return [FMDBDataAccess getIssuesForCategory:category byType:[NSNumber numberWithInt:type]];
+- (NSMutableArray *) getIssuesForCategory:(BBIssueCategory *)_category byType:(int)type {
+    return [FMDBDataAccess getIssuesForCategory:_category byType:[NSNumber numberWithInt:type]];
 }
 
 @end
