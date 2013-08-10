@@ -13,8 +13,8 @@
 
 @interface BBModelController : NSObject 
 
-@property (nonatomic, strong) NSString * selectedIssueTypeName;
-@property (nonatomic, strong) NSMutableArray * categoriesArray;
+@property (nonatomic, strong) NSString        * selectedIssueTypeName;
+@property (nonatomic, strong) NSMutableArray  * categoriesArray;
 @property (nonatomic, strong) BBIssueCategory * selectedIssueCategory;
 
 #pragma mark Init Singleton
@@ -23,14 +23,14 @@
 
 #pragma mark Download Database
 
-- (void)downloadSQLite;
+- (void) downloadSQLite;
 
 #pragma mark Get Objects From Database
 
-- (BBAbout*) getAboutObject;
-- (NSMutableArray*) getTipsArray;
-- (NSMutableArray*) getCategoriesArray;
-- (BBIssue*) getIssueForIssueCategory: (BBIssueCategory*)_category byType: (int)issueType;
-- (NSMutableArray*) getIssuesForCategory: (BBIssueCategory*)_category byType: (int)type;
+- (BBAbout *) getAboutObject;
+- (NSMutableArray *) getTipsArray;
+- (NSMutableArray *) getCategoriesArray;
+- (BBIssue *) getIssueForIssueCategory: (BBIssueCategory *)_category byType: (int)issueType;
+- (NSMutableArray *) getIssuesForCategory: (BBIssueCategory *)_category byType: (int)type;
 
 @end
