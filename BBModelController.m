@@ -24,7 +24,7 @@ static BBModelController * sharedModel = nil;
 
 + (BBModelController *) sharedModelController {
     if (sharedModel == nil) {
-		static dispatch_once_t onceToken;
+	static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             sharedModel = [[BBModelController alloc] init];
             sharedModel.selectedIssueCategory = [[BBIssueCategory alloc]init];
